@@ -1,0 +1,168 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Business Registration Form</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+    <header>
+        <h1>Business Registration <span>Form</span></h1>
+        <p>Fill-out this form to get your registration completed easily.</p>
+    </header>
+    <form id="business-reg ">
+        <section class="business-section" id="step1">
+            <div class="business">
+                <h3>Business Information</h2>
+                    <br>
+                    <label for="business_classname">Business Classification</label>
+                    <br>
+                    <select id="business_classname" name="business_classname" required=""
+                        placeholder="Select Business Classification">
+                        <option value="" disabled selected hidden>Select Business Classification</option>
+                        <option value="start">
+                            Starter Business
+                        </option>
+
+                        <option value="reg_business">
+                            Registered Business
+                        </option>
+                    </select>
+                    <br>
+                    <label for="business_type">Business Type</label>
+                    <br>
+                    <select name="business_type" id="business_type" required="" placeholder="Select Business Type">
+                        <option value="" disabled selected hidden>Select Business Type</option>
+                        <option value="sole_pro">
+                            Sole Proprietor
+                        </option>
+
+                        <option value="partner">
+                            Partnership
+                        </option>
+                        <option value="limited_comp">
+                            Limited Company
+                        </option>
+                    </select>
+                    <br>
+                    <label for="business_name">Business Name</label>
+                    <br>
+                    <input type="text" name="business_name" id="business_name" required
+                        placeholder="e.g Molly Stitches">
+                    <br>
+                    <label for="business_category">Business Category</label>
+                    <br>
+                    <input type="text" name="business_category" id="business_category" required
+                        placeholder="E.g Fashion">
+                    <br>
+                    <label for="business_nature">Specific Nature of Business</label>
+                    <br>
+                    <input type="text" name="business_nature" id="business_nature" required
+                        placeholder="E.g Clothing Wear Store">
+                    <br>
+                    <label for="business_desc">Business Description</label>
+                    <br>
+                    <textarea name="business_desc" id="business_desc" placeholder="Describe Your Business here..."
+                        required></textarea>
+                    <button type="button" class="next_button" id="next_button1">Next</button>
+            </div>
+        </section>
+        <br>
+        <section class="owner_section" id="step2" style="display: none;">
+            <div class="ownerInfo">
+                <h3>Owner Information</h3>
+                <br>
+                <label for="full_name">Full Name</label>
+                <br>
+                <input type="text" name="full_name" id="full_name" required placeholder="Enter your full name">
+                <br>
+                <label for="email">Email</label>
+                <br>
+                <input type="email" name="email" id="email" placeholder="Enter your email">
+                <br>
+                <label for="dob">Date of Birth</label>
+                <br>
+                <input type="date" name="dob" id="dob">
+                <br>
+                <label for="phone_no">Phone Number</label>
+                <br>
+                <input type="tel" name="phone_no" id="phone_no" placeholder="Enter your phone number">
+                <br>
+                <label for="nin">NIN</label>
+                <br>
+                <input type="text" name="nin" id="nin" inputmode="numeric" maxlength="11" placeholder="12345678901">
+                <br>
+                <label for="address">Residential Address</label>
+                <br>
+                <input type="text" name="address" id="res_address"
+                    placeholder="e.g 15 Ademola Adetokunbo Street, Wuse 2, Abuja">
+                <br>
+                <div class="but">
+                    <button type="button" class="next_button" id="next_button" onclick="prevStep(2)">Back</button>
+                    <button type="button" class="next_button" id="next_button2">Next</button>
+                </div>
+            </div>
+        </section>
+        <section class="proof_section" id="step3" style="display: none;">
+            <div class="proof_info">
+                <h3>Business Address & Documents</h3>
+                <br>
+                <label for="bus_address">Business Address</label>
+                <br>
+                <input name="bus_address" id="bus_address"
+                    placeholder="e.g 15 Ademola Adetokunbo Street, Wuse 2, Abuja">
+                <br>
+                <label for="reg_no">CAC Registration Number</label>
+                <br>
+                <input type="text" name="reg_no" id="reg_no" inputmode="numeric"
+                    placeholder="Enter your Registration No">
+                <br>
+                <label for="tin">Tax Identification Number</label>
+                <br>
+                <input type="text" name="tin" id="tin" inputmode="numeric" placeholder="Enter your TIN">
+                <br>
+                <label for="cio">Certificate of Incorporation</label>
+                <br>
+                <input type="file" name="cio" id="cio" accept=".pdf,.jpg,.png">
+                <br>
+                <label for="poa">Proof of Address</label>
+                <br>
+                <input type="file" name="poa" id="poa" accept=".pdf,.jpg,.png">
+                <br>
+                <div class="but">
+                    <button type="button" class="next_button" id="next_button" onclick="prevStep(3)">Back</button>
+                    <button type="button" class="next_button" id="next_button3">Next</button>
+                </div>
+            </div>
+        </section>
+        <section class="bank_section" id="step4" style="display: none;">
+            <div class="bank_info">
+                <h3>Bank/Settlement Details</h3>
+                <br>
+                <label for="bank_name">Bank Name</label>
+                <br>
+                <input type="text" name="bank_name" id="bank_name" placeholder="Enter your Bank name">
+                <br>
+                <label for="acc_name">Account Name</label>
+                <br>
+                <input type="text" name="acc_name" id="acc_name" placeholder="Enter your Account name">
+                <br>
+                <label for="acc_no">Account Number</label>
+                <br>
+                <input type="text" name="acc_no" id="acc_no" inputmode="numeric" maxlength="10"
+                    placeholder="Enter your account number">
+                <br>
+                <div class="but">
+                    <button type="button" class="next_button" id="next_button" onclick="prevStep(4)">Back</button>
+                    <button type="submit" class="next_button" id="next_button4">Submit</button>
+                </div>
+            </div>
+        </section>
+    </form>
+    <script src="script.js"></script>
+</body>
+
+</html>
