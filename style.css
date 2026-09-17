@@ -194,6 +194,7 @@ form {
     font-size: 1.9rem;
   }
   form{
+    position: static;
     width:100%
   }
   header h2{
